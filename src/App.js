@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Box, Grid, Container } from "@mui/material";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import SearchArea from "./components/SearchArea"; // New: combines welcome, search bar, tags
+import JobSection from "./components/JobSection";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <Header />
+      <Container maxWidth="xl">
+        <Grid container spacing={3} sx={{ padding: '1rem' }}>
+          {/* Sidebar and SearchArea side by side */}
+          <Grid item xs={12} md={2}>
+            <Sidebar />
+          </Grid>
+          <Grid item xs={12} md={10}>
+            <SearchArea />
+            <JobSection title="Featured Jobs" />
+          </Grid>
+        </Grid>
+        {/* Job sections below */}
+        {/* <Box sx={{ mt: 3,padding: '1rem' }} >
+          <JobSection title="Featured Jobs" />
+          <JobSection title="Recommended Jobs" />
+          <JobSection title="Latest Jobs" />
+        </Box> */}
+      </Container>
+    </Box>
   );
 }
 
