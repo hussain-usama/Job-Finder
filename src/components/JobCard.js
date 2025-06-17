@@ -5,11 +5,9 @@ import {
   Typography,
   Button,
   Box,
-  Chip,
   IconButton,
   Link,
 } from "@mui/material";
-import BusinessIcon from "@mui/icons-material/Business";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import GroupIcon from "@mui/icons-material/Group";
