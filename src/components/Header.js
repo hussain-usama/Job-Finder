@@ -87,8 +87,7 @@ const Header = () => {
       >
         <Box sx={{ width: 240 }} role="presentation" onClick={handleDrawerToggle}>
           <Box sx={{ display: "flex", alignItems: "center", p: 2 }}>
-            <img src="https://i.imgur.com/6VBx3io.png" alt="Logo" style={{ width: 36, marginRight: 8 }} />
-            <Typography variant="h6" fontWeight={700}>Menu</Typography>
+            <img src={Logo} alt="Logo" style={{ width: 36, marginRight: 8 }} />
           </Box>
           <Divider />
           <List>
