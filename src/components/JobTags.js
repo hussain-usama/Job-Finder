@@ -17,9 +17,10 @@ const JobTags = () => (
           fontWeight: 500,
           fontSize: 15,
           borderColor: "#bdbdbd",
-          color: "#3a3a3a",
-          bgcolor: "#fff",
+          color: "#737A91",
+          bgcolor: "transparent",
           borderRadius: "6px",
+          padding:'2px',
           height: 36,
         }}
       />

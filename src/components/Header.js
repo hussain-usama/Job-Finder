@@ -16,6 +16,8 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
+import Logo from '../assets/Logo.png';
+import UserProfile from '../assets/UserProfile.png';
 
 const navItems = [
   "Find Jobs",
@@ -39,7 +41,7 @@ const Header = () => {
       <AppBar position="static" color="inherit" elevation={0} sx={{ borderBottom: 1, borderColor: "#eee" }}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <img src="https://i.imgur.com/6VBx3io.png" alt="Logo" style={{ width: 36, marginRight: 16 }} />
+            <img src={Logo} alt="Logo" style={{ width: 36, marginRight: 16 }} />
             {/* Desktop Nav */}
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {navItems.map((item) => (
@@ -52,15 +54,15 @@ const Header = () => {
           <Box sx={{ display: "flex", alignItems: "center" }}>
             {/* Search bar: show on md+ */}
             <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", bgcolor: "#f5f6fa", px: 2, borderRadius: 2, mr: 2 }}>
-              <InputBase placeholder="Search…" sx={{ ml: 1, flex: 1 }} />
               <IconButton size="small">
                 <SearchIcon />
               </IconButton>
+              <InputBase placeholder="Search…" sx={{ ml: 1, flex: 1 }} />
             </Box>
-            <Button variant="contained" sx={{ bgcolor: "#2563eb", mr: 2, textTransform: "none" }}>
+            <Button variant="contained" sx={{ bgcolor: "#0154AA", mr: 2, textTransform: "none", borderRadius:'8px' }}>
               Resume Builder
             </Button>
-            <Avatar src="https://randomuser.me/api/portraits/men/32.jpg" />
+            <Avatar src={UserProfile} />
             {/* Hamburger menu: show on xs/sm */}
             <IconButton
               sx={{ ml: 1, display: { xs: "inline-flex", md: "none" } }}

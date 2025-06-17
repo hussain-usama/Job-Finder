@@ -13,7 +13,8 @@ import {
   Link,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+import Profile from '../assets/Profile.png'
+import ProfileCover from '../assets/ProfileCover.jpg'
 const coverUrl =
   "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80";
 const avatarUrl = "https://randomuser.me/api/portraits/men/32.jpg";
@@ -48,13 +49,13 @@ const Sidebar = () => {
           sx={{
             width: "100%",
             height: 70,
-            background: `url(${coverUrl}) center/cover no-repeat`,
+            background: `url(${ProfileCover}) center/cover no-repeat`,
             position: "relative",
           }}
         />
         {/* Avatar */}
         <Avatar
-          src={avatarUrl}
+          src={Profile}
           sx={{
             width: 72,
             height: 72,
@@ -179,8 +180,12 @@ const Sidebar = () => {
           onClick={() => setOpen((o) => !o)}
         >
           <Typography fontWeight={600} fontSize={16}>
-            My calendar
+            My calendar       <br/>
+             <Typography fontWeight={500} fontSize={14} color="#737A91">
+              Upcoming Interviews
+             </Typography>
           </Typography>
+          <br/>
           <IconButton size="small" sx={{ ml: 1 }}>
             <ExpandMoreIcon
               sx={{
